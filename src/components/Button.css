@@ -1,0 +1,53 @@
+:root{
+    --primary: #fff;
+}
+
+/* every button starts off with this */
+.btn {
+    /* 8 top bottom 20 left right */
+    padding: 8px 20px; 
+    /* very minimal rounding */
+    border-radius: 2px;
+    /* making sure nothing around the button */
+    outline: none;
+    border: none;
+    /* just how your cursor looks when you hover */
+    cursor: pointer;
+}
+
+/* buton STYLES */
+.btn--primary{
+    /* reusable styling..? */
+    background-color: var(--primary);
+    /* text color */
+    color: #242424;
+    border: 1px solid var(--primary);
+}
+
+.btn--outline{
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    /* find out what this means */
+    transition: all 0.3 ease-out;
+}
+
+/* button SIZING */
+/* different sizing of buttons */
+.btn--medium{
+    padding: 8px 20px;
+    font-size: 18px;
+}
+
+.btn--large{
+    padding: 12px 26px;
+    font-size: 20px;
+}
+
+.btn--medium:hover, .btn--large:hover{
+    transition: all 0.3 ease-out;
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+}
