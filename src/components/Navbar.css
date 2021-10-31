@@ -3,187 +3,132 @@
     lighter black at the end 100%*/
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(27, 23, 23) 100%);
     height: 80px;
-    display: flex;
     /* should do this in the container? */
-    justify-content: right;
-    align-items: center;
+    display: flex;
+    justify-content: flex-start;
     font-size: 1.2rem;
     position: sticky;
-    top: 0;
-    z-index: 999; /*making sure this is top level */
+    z-index: 999;
   }
-  
-  /* everything in the middle */
-  .navbar-container {
-    /* flexbox */
+
+  .navbar-container{
     display: flex;
-    /* gruping is center*/
     justify-content: flex-start;
-    /* position is at center */
     align-items: center;
-    height: 80px;
-    max-width: 1500px;
+    /* height: 80px;  */
   }
-  
-  .navbar-logo {
+
+  .navbar-logo{
+    display: flex;
     color: #fff;
-    /*justify itself and put it on very start=left*/
-    justify-self: start;
-    /* make some space from left */
+    text-decoration: none;
+    font-size: 2rem;
     margin-left: 20px;
-    /* hovering over icon */
-    /* no line on text/else */
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
     align-items: center;
   }
-  
-  .fa-gamepad {
-    /* some spacing for making it align */
-    margin-top: 0.2rem;
-    margin-left: 0.4rem;
-    /* size of icon */
+
+   .fa-gamepad{
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
     font-size: 2rem;
+  } 
+
+  .nav-menu{
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    margin-right: 1.5rem;
+
+    /* same thing? */
+    /* display: grid;
+    grid-template-columns: repeat(4,auto);
+    list-style: none;
+    text-align: center;
+    grid-gap: 10px;
+    width: 60vw; */
+    /* put the categories at the end*/
+    /* justify-content: end;
+    margin-right: 1.5rem; */
   }
 
-
-  /* be default  */
-  .nav-menu {
-    display: grid;
-    /* place the content in column starting from grid 4 position to end auto*/
-    grid-template-columns: repeat(4, auto); 
-    /* spacing between each element based on grid */
-    grid-gap: 10px;
-    /* no bullet points*/
-    list-style: none;
-    /* text in middle */
-    text-align: center;
-    /* width of the nav menu container--> will push other stuff towards left*/
-    width: 60vw;
-    /* bring it to the end of navbar */
-    justify-content: end; 
-    /* move it from right a little so going left basically*/
-    margin-right: 2rem;   
-  } 
-  
-  .nav-item {
+  .nav-item{
+    /* want the nav itmes to have same height as navbar */
+    /* text is going to move up because it starts left top corner */
+    margin: 10px;
     height: 80px;
   }
-  
-  .nav-links {
+
+  .nav-links{
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
+    /* manually move it to center with padding */
     padding: 0.5rem 1rem;
     height: 100%;
-  } 
+  }
 
-  
-  .nav-links:hover {
-    /* when you hover it underlines the border bottom and pushes the text slightly up */
+  .nav-links:hover{
+    /* margin-bottom: 1.8rem; */
     border-bottom: 4px solid #fff;
+    /* how long it takes before border starts coming in */
+    /* this will also push the text up since border+ height 100% will not have enough space */
     transition: all 0.2s ease-out;
   }
-  
-  .fa-bars {
+
+
+  .fa-bars{
     color: #fff;
   }
-  
-  /* hide */
-  .nav-links-mobile {
+
+  .fa-times{
+    color: #fff;
+  }
+
+  /* need the sign-up li for mobile menu later */
+  .nav-links-mobile{
     display: none;
   }
-  
-  .menu-icon {
+
+  /* displaying only at certain width later */
+  .menu-icon{
     display: none;
   }
-  
+
   /* these are only active when the width is wider than 960 */
   @media screen and (max-width: 960px) {
-     .NavbarItems {
+    /* .NavbarItems{
       position: relative;
-    }
-  
-    /* right now if you fold menu less than 960 it starts folding */
-    /* shifting it out from viewer port */
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+    } */
+
+    .nav-menu{
+      display:flex;
       height: 90vh;
-      position: absolute;
-      top: 80px;
-      left: -100%;
-      opacity: 1;
-      transition: all 0.5s ease;
+
     }
-  
-    /* .nav-menu.active {
+
+    .nav-menu.active{
       background: #242222;
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-    } */
-  
-    /* .nav-links {
-      text-align: center;
-      padding: 2rem;
-      width: 100%;
-      display: table;
-    } */
-  
-    /* .nav-links:hover {
-      background-color: #fff;
-      color: #242424;
-      border-radius: 0;
-    } */
-  
-    /* .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
-    } */
-  
-    /* this is your answer to how minimize works */
-    /* you can set styling as hidden and then get them back using media screen(kind of like if statement) */
+    }
+
+
     .menu-icon {
-      display: block;
-      position: absolute;
-      top: 0;
+      /* why cant we use flexbox justify-content end here */
+      display:flex;
+      /* relative to its nearest parent so navbar-container */
+      position: absolute;  
       right: 0;
+      transform: translate(-80%, 10%);
+      font-size: 1.8rem; 
+      /*
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
-      cursor: pointer;
+      cursor: pointer; */
     }
-  
-    .fa-times {
-      color: #fff;
-      font-size: 2rem;
-    }
-  
-    /* .nav-links-mobile {
-      display: block;
-      text-align: center;
-      margin: 2rem auto;
-      border-radius: 4px;
-      width: 80%;
-      text-decoration: none;
-      font-size: 1.5rem;
-      background-color: transparent;
-      color: #fff;
-      padding: 14px 20px;
-      border: 1px solid #fff;
-      transition: all 0.3s ease-out;
-    } */
-  
-    /* .nav-links-mobile:hover {
-      background: #fff;
-      color: #242424;
-      transition: 250ms;
-    } 
-    */
-  }
+
+
+
+ }
