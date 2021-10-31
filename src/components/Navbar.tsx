@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                     {/* here is our navigation bar, if its active(true) show menu if not nothing */}
                     <ul className={click? 'nav-menu active' : 'nav-menu'}>
                         <li className= 'nav-item'>
-                        {/* if you click on one of the items then let onClick go back to false(hide)*/}
+                        {/* if you click on one of the items then let onClick go back to falsfe(hide)*/}
                             <Link to= '/home' className= "nav-links" onClick={handleClick}>Home</Link>
                         </li>
                         <li className= 'nav-item'>

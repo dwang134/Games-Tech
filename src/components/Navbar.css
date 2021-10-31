@@ -84,16 +84,13 @@
     color: #fff;
   }
 
-  .fa-times{
-    color: #fff;
-  }
-
   /* need the sign-up li for mobile menu later */
   .nav-links-mobile{
     display: none;
   }
 
   /* displaying only at certain width later */
+  /* dont have to style cross since you cant see */
   .menu-icon{
     display: none;
   }
@@ -105,19 +102,12 @@
     } */
 
     .nav-menu{
-      display:flex;
-      height: 90vh;
-
+      display: none;
     }
-
-    .nav-menu.active{
-      background: #242222;
-    }
-
 
     .menu-icon {
       /* why cant we use flexbox justify-content end here */
-      display:flex;
+      display: block;
       /* relative to its nearest parent so navbar-container */
       position: absolute;  
       right: 0;
@@ -129,6 +119,66 @@
       cursor: pointer; */
     }
 
+    .fa-times{
+      color:#fff;
+      font-size: 2rem;
+    }
+
+    .nav-menu.active{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+    
+    .nav-links{
+      /* you can also use flexbox+ justify-content but same thing */
+      display: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+
+
+    .nav-links:hover{
+      background-color: #fff;
+      /* change text color so its not white white */
+      color: #242424;
+      border-radius: 3px;
+    }
+
+
+    /* signup button for mobile */
+   .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover{
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
 
 
  }
