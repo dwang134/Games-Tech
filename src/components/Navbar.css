@@ -107,46 +107,51 @@
     }
   
     /* right now if you fold menu less than 960 it starts folding */
-    /* shifting it out from viewer port */
+    /* shifting it out from viewer port basically hiding it */
     .nav-menu {
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 90vh;
-      position: absolute;
-      top: 80px;
+      position: absolute; 
+      top: 80px; 
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
     }
-  
-    /* .nav-menu.active {
+    
+    /* when its clicked */
+    .nav-menu.active {
       background: #242222;
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
-    } */
+    }
   
-    /* .nav-links {
+    .nav-links {
       text-align: center;
       padding: 2rem;
       width: 100%;
       display: table;
-    } */
+    }
   
-    /* .nav-links:hover {
+    .nav-links:hover {
       background-color: #fff;
       color: #242424;
       border-radius: 0;
-    } */
+    }
   
-    /* .navbar-logo {
+    .navbar-logo {
+      /* display: flex;
+      justify-content: start;
+   */
+      /* align-items: center; */
       position: absolute;
-      top: 0;
+      /* top: 0;
       left: 0;
-      transform: translate(25%, 50%);
-    } */
+      transform: translate(25%, 50%); */
+    }
   
     /* this is your answer to how minimize works */
     /* you can set styling as hidden and then get them back using media screen(kind of like if statement) */
@@ -165,7 +170,7 @@
       font-size: 2rem;
     }
   
-    /* .nav-links-mobile {
+    .nav-links-mobile {
       display: block;
       text-align: center;
       margin: 2rem auto;
@@ -178,7 +183,7 @@
       padding: 14px 20px;
       border: 1px solid #fff;
       transition: all 0.3s ease-out;
-    } */
+    }
   
     /* .nav-links-mobile:hover {
       background: #fff;
