@@ -14,7 +14,7 @@ interface Props{
     buttonSize?: any
 }
 
-const Button:React.FC<Props> = ({children,  buttonStyle, buttonSize}) => {
+const Button:React.FC<Props> = ({children, buttonStyle, buttonSize}) => {
     //check if it has a style if it does then keep it the way it is if not set to btn--primary
     const checkButtonStyles= STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
     //you can also just write it in className but its cleaner
@@ -26,8 +26,7 @@ const Button:React.FC<Props> = ({children,  buttonStyle, buttonSize}) => {
             {/* rendering whatever you passed in as the prop */}
             {/* two main className styles of the button */}
             <button className={`btn ${checkButtonStyles} ${checkButtonSize}`}>
-                {/* onClick={onClick}
-                type= {type} */}
+                {/* onClick={onClick} */}
                 {children}
             </button>
         </Link>

@@ -3,9 +3,8 @@
     lighter black at the end 100%*/
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(27, 23, 23) 100%);
     height: 80px;
-    /* should do this in the container? */
-    display: flex;
-    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
     font-size: 1.2rem;
     position: sticky;
     z-index: 999;
@@ -13,18 +12,21 @@
 
   .navbar-container{
     display: flex;
-    justify-content: flex-start;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    /* height: 80px;  */
+    box-sizing: border-box;
   }
 
-  .navbar-logo{
-    display: flex;
+  .navbar-logo{ 
+    justify-self: flex-start;
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
-    margin-left: 20px;
     align-items: center;
+    width: 40%;
+    margin-left: 5%;
   }
 
    .fa-gamepad{
@@ -35,13 +37,12 @@
 
   .nav-menu{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex-direction: row;
     list-style: none;
     text-align: center;
-    width: 60vw;
-    margin-right: 1.5rem;
-
+    margin-right: 1.5rem; 
+    width: 35%;
     /* same thing? */
     /* display: grid;
     grid-template-columns: repeat(4,auto);
@@ -50,14 +51,16 @@
     grid-gap: 10px;
     width: 60vw; */
     /* put the categories at the end*/
-    /* justify-content: end;
-    margin-right: 1.5rem; */
   }
 
+  .btn-sign{
+    margin-right: 5%;
+  }
+
+  /* alignment */
   .nav-item{
-    /* want the nav itmes to have same height as navbar */
-    /* text is going to move up because it starts left top corner */
     margin: 10px;
+    /* want the nav items to have same height as navbar */
     height: 80px;
   }
 
@@ -101,8 +104,9 @@
       position: relative;
     } */
 
-    .nav-menu{
-      display: none;
+    .navbar-logo{ 
+      /* original 45% */
+      margin-right: 50%;
     }
 
     .menu-icon {
@@ -113,22 +117,23 @@
       right: 0;
       transform: translate(-80%, 10%);
       font-size: 1.8rem; 
-      /*
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer; */
     }
 
     .fa-times{
       color:#fff;
       font-size: 2rem;
     }
+    
+    .nav-menu{
+      display: none;
+    }
 
+    /* when clicked */
     .nav-menu.active{
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 50vh;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -139,6 +144,7 @@
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+      font-size: 1.5rem;
     }
     
     .nav-links{
@@ -149,14 +155,12 @@
       display: table;
     }
 
-
     .nav-links:hover{
       background-color: #fff;
       /* change text color so its not white white */
       color: #242424;
       border-radius: 3px;
     }
-
 
     /* signup button for mobile */
    .nav-links-mobile {
