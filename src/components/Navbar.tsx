@@ -35,8 +35,7 @@ const Navbar: React.FC = () => {
             <div className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className= "navbar-logo">
-                        Games
-                        <span className= "text-primary">Tech</span>
+                        Games<div></div>Tech
                         <i className="fas fa-gamepad"></i>
                     </Link>
                     {/* click on the bar menu click it again it will hide and re */}
@@ -46,7 +45,7 @@ const Navbar: React.FC = () => {
                     {/* here is our navigation bar, if its active(true) show menu if not nothing */}
                     <ul className={click? 'nav-menu active' : 'nav-menu'}>
                         <li className= 'nav-item'>
-                        {/* if you click on one of the items then let onClick go back to false(hide)*/}
+                        {/* if you click on one of the items then let onClick go back to falsfe(hide)*/}
                             <Link to= '/home' className= "nav-links" onClick={handleClick}>Home</Link>
                         </li>
                         <li className= 'nav-item'>
