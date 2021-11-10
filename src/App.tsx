@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
 
 //different syntax?
 // const App: React.FC = () => {
@@ -14,7 +15,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path= "/" exact/>
+          <Route path= "/" exact component= {Home}/>
         </Switch>
       </Router>
     </>

@@ -1,50 +1,188 @@
-  .navbar {
-  /* 90 degrees it starts gradient from the middle, darker black from the left fading start from 0% going to
-  lighter black at the end 100%*/
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(27, 23, 23) 100%);
-  height: 80px;
-  /* should do this in the container? */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
-  z-index: 999;
-}
+    .navbar {
+    /* 90 degrees it starts gradient from the middle, darker black from the left fading start from 0% going to
+    lighter black at the end 100%*/
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(27, 23, 23) 100%);
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    font-size: 1.2rem;
+    position: sticky;
+    z-index: 999;
+  }
 
-.navbar-container{
-  height: 80px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+  .navbar-container{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
 
-.navbar-logo{
-  color: #fff;
-  display:flex;
-  justify-self: flex-start;
-  text-decoration: none;
-  font-size: 2rem;
-}
+  .navbar-logo{ 
+    justify-self: flex-start;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    align-items: center;
+    width: 40%;
+    margin-left: 5%;
+  }
 
-.fa-gamepad{
-  margin-top: 0.6rem;
-  margin-left: 0.2rem;
-}
+   .fa-gamepad{
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+    font-size: 2rem;
+  } 
 
-.nav-menu{
-  display: flex;
-  gap: 10px;
-  justify-content: end;
-  flex-direction: row;
-  list-style: none;
-  text-align: center;
-  width: 60vw;
-  margin-right: 10px;
-  margin-left: 10vw;
-}
+  .nav-menu{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    list-style: none;
+    text-align: center;
+    margin-right: 1.5rem; 
+    width: 35%;
+    /* same thing? */
+    /* display: grid;
+    grid-template-columns: repeat(4,auto);
+    list-style: none;
+    text-align: center;
+    grid-gap: 10px;
+    width: 60vw; */
+    /* put the categories at the end*/
+  }
 
-.nav-item{
-  height: 80px;
-}
+  .btn-sign{
+    margin-right: 5%;
+  }
+
+  /* alignment */
+  .nav-item{
+    margin: 10px;
+    /* want the nav items to have same height as navbar */
+    height: 80px;
+  }
+
+  .nav-links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* manually move it to center with padding */
+    padding: 0.5rem 1rem;
+    height: 100%;
+  }
+
+  .nav-links:hover{
+    /* margin-bottom: 1.8rem; */
+    border-bottom: 4px solid #fff;
+    /* how long it takes before border starts coming in */
+    /* this will also push the text up since border+ height 100% will not have enough space */
+    transition: all 0.2s ease-out;
+  }
+
+
+  .fa-bars{
+    color: #fff;
+  }
+
+  /* need the sign-up li for mobile menu later */
+  .nav-links-mobile{
+    display: none;
+  }
+
+  /* displaying only at certain width later */
+  /* dont have to style cross since you cant see */
+  .menu-icon{
+    display: none;
+  }
+
+  /* these are only active when the width is wider than 960 */
+  @media screen and (max-width: 960px) {
+    /* .NavbarItems{
+      position: relative;
+    } */
+
+    .navbar-logo{ 
+      /* original 45% */
+      margin-right: 50%;
+    }
+
+    .menu-icon {
+      /* why cant we use flexbox justify-content end here */
+      display: block;
+      /* relative to its nearest parent so navbar-container */
+      position: absolute;  
+      right: 0;
+      transform: translate(-80%, 10%);
+      font-size: 1.8rem; 
+    }
+
+    .fa-times{
+      color:#fff;
+      font-size: 2rem;
+    }
+    
+    .nav-menu{
+      display: none;
+    }
+
+    /* when clicked */
+    .nav-menu.active{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 50vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      font-size: 1.5rem;
+    }
+    
+    .nav-links{
+      /* you can also use flexbox+ justify-content but same thing */
+      display: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+
+    .nav-links:hover{
+      background-color: #fff;
+      /* change text color so its not white white */
+      color: #242424;
+      border-radius: 3px;
+    }
+
+    /* signup button for mobile */
+   .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover{
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+
+
+ }
