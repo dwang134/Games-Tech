@@ -1,16 +1,24 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const CardItem: React.FC = () => {
+interface Props{
+    src: string;
+    text: string;
+    label: string;
+    path: string;
+}
+
+
+const CardItem: React.FC<Props> = ({src, text, label, path}) => {
     return (
         <>
             <li className="card-item">
-                <Link to= '/' className="card-item-link">
-                    <figure className="card-item-pic-wrap">
-                        <img src="/" alt="News Image" className="card-item-img"/>
+                <Link to= {path} className="card-item-link">
+                    <figure className="card-item-pic-wrap" data-category= {label}>
+                        <img src= {src} alt="News Image" className="card-item-img"/>
                     </figure>
                     <div className="card-item-info">
-                        <h5 className="card-item-text">
+                        <h5 className="card-item-text">{text}
                         </h5>
                     </div>
                 </Link>

@@ -22,7 +22,7 @@ h1{
 }
 
 .card-items{
-    margin-bottom: 24px;
+    margin-bottom: 24px; /*4 rem? */
 }
 
 .card-item{

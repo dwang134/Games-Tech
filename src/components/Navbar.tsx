@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
             <Link to="/" className="navbar-logo">
               Games
               <span className="text-primary">Tech</span>
+              {/* <img src="/videos/giphy.gif" className="gif-logo"/> */}
               <i className="fas fa-gamepad"></i>
             </Link>
             {/* click on the bar menu click it again it will hide and re */}

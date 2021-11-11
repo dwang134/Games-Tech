@@ -5,7 +5,8 @@ import { Button } from "./Button";
 const HeroSection = () => {
   return (
     <div className="hero-container">
-      <video src="/videos/video-2.mp4" loop muted></video>
+      {/* <img src="/videos/computerBrowse.gif"/> */}
+      <video src="/videos/Game_room.mp4" autoPlay loop muted></video>
       <h1>GAMES AND TECHNOLOGY</h1>
       <p>start browsing today</p>
       <div className="hero-btns">
