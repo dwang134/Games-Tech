@@ -5,8 +5,8 @@ import { Button } from "./Button";
 const HeroSection = () => {
   return (
     <div className="hero-container">
-      <video src="/videos/video-2.mp4" autoPlay loop muted></video>
-      <h1>GET THE LATEST NEWS</h1>
+      <video src="/videos/video-2.mp4" loop muted></video>
+      <h1>GAMES AND TECHNOLOGY</h1>
       <p>start browsing today</p>
       <div className="hero-btns">
         <Button buttonStyle="btn--outline" buttonSize="btn--large">
