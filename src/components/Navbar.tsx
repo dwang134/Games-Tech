@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {Button} from './Button';
 import './Navbar.css'
-
+import {Button} from './Button'
 const Navbar: React.FC = () => {
 
     const [click, setClick]= useState(false);
@@ -37,6 +36,7 @@ const Navbar: React.FC = () => {
             <Link to="/" className="navbar-logo">
               Games
               <span className="text-primary">Tech</span>
+              {/* <img src="/videos/giphy.gif" className="gif-logo"/> */}
               <i className="fas fa-gamepad"></i>
             </Link>
             {/* click on the bar menu click it again it will hide and re */}

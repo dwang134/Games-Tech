@@ -1,0 +1,135 @@
+h1{
+    text-align: center;
+    color: #000;
+}
+
+.card{
+    background: #f6f6f6; 
+    padding: 3rem 1rem;
+}
+
+.card-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* .card-wrapper{
+    position: relative;
+    margin: 50px 0 45px;
+} */
+
+.card-items{
+    position: relative;
+    margin: 50px 0 70px;
+    /*option to either make a h+w or relative with margin */
+}
+
+.card-item{
+    display: flex;
+    flex: 1;
+    margin: 0 0.75rem;
+    border-radius: 10px;
+}
+
+.card-item-link{
+    display:flex;
+    background: #fff;
+    flex-flow: column;
+    width: 100%;
+    /* height: 500px; you could give it width and height but then you have to declare that right away. */
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    /* hide anything going out of frame */
+    overflow: hidden;
+    text-decoration: none;
+    /* border-style: border-box; */
+    /* position: relative; */
+    /*if there is any sizing of container you want to declare 
+    based on how big that is instead of giving parent container a fixed size and then dont use relative*/
+}
+
+.card-item-pic-wrap {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-bottom: 70%; /* 70percent increase, if no bottom specified it will be 140%*/
+    /* box-sizing: border-box; */
+    overflow: hidden;
+  }
+  
+  .fade-img {
+    animation-name: fade-img;
+    animation-duration: 2s;
+  }
+  
+  .card-item-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all 0.2s linear;
+  }
+
+  .card-item-pic-wrap::after {
+    content: attr(data-category);
+    position: absolute;
+    bottom: 0;
+    margin-right: 4%;
+    padding: 6px 8px;
+    max-width: calc((100%)-60px);
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, rgb(111, 102, 220), rgb(98, 87, 235));
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+  
+  .card-item-pic-wrap:hover {
+    transform: scale(1.1);
+  }
+
+  
+  .card-item-info {
+    padding: 20px 30px 30px;
+    background: #fff;
+  }
+  
+  .card-item-text {
+    color: #252e48;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .content-blog-container {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .card-items {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .card-item {
+      margin-bottom: 1rem;
+    }
+  }
+  

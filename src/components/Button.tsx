@@ -2,23 +2,24 @@ import React from 'react'
 import './Button.css'
 import {Link} from 'react-router-dom'
 
-const STYLES= ['btn--primary', 'btn--outline']
+const STYLES= ['btn--primary', 'btn--outline'];
 
 const SIZES= ['btn--medium', 'btn--large'];
 
 interface Props{
-    children?: string,
+    children?: any,
     type?: any,
     onClick?: any,
     buttonStyle?: any,
     buttonSize?: any
+    
 }
 
-export const Button:React.FC<Props> = ({children, onClick,type, buttonStyle, buttonSize}) => {
+export const Button:React.FC<Props> = ({children, type, onClick, buttonStyle, buttonSize}) => {
     //check if it has a style if it does then keep it the way it is if not set to btn--primary
     const checkButtonStyles= STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
     //you can also just write it in className but its cleaner
-    const checkButtonSize= SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
+    const checkButtonSize= SIZES.includes(buttonSize) ? buttonSize : SIZES[0]; 
 
 
     return (
