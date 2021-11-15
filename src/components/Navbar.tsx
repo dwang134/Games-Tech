@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      to="/technology"
+                      to="/tech"
                       className="nav-links"
                       onClick={handleClick}
                     >

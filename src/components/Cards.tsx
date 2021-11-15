@@ -9,7 +9,7 @@ const Cards = () => {
         <div className="card-wrapper">
           <ul className="card-items">
             <CardItem
-              src="images/img2.jpg"
+              src="images/img1.jpg"
               text="Where to buy Nvidia GeForce RTX 3060 Ti"
               label="Technology"
               path="/tech"
@@ -20,6 +20,8 @@ const Cards = () => {
               label="Games"
               path="/games"
             />
+            </ul>
+            <ul className="card-items">
             <CardItem
               src="images/img2.jpg"
               text="Where to buy Nvidia GeForce RTX 3060 Ti"
@@ -32,7 +34,12 @@ const Cards = () => {
               label="Games"
               path="/games"
             />
-
+            <CardItem
+              src="images/img3.jpg"
+              text="Is Sekiro still one of the best AAA title in 2021?"
+              label="Games"
+              path="/games"
+            />
           </ul>
         </div>
       </div>

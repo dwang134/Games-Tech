@@ -1,0 +1,30 @@
+.product-text{
+    color: yellow;
+    margin-top: 25vh;
+}
+
+.volume-group{
+    flex: 1;
+    align-items: center;
+    margin: 0 2rem; 
+    /* background: red; */
+}
+
+.fa-volume-down{
+    font-size: 4rem;
+}
+.fa-volume-up{
+    font-size: 4rem;
+}
+
+.fa-volume-up , .fa-volume-down:hover{
+    cursor: pointer;
+}
+
+.volume-container{
+    display:flex;
+    align-items: center;
+    /* background: blue; */
+}
+
+

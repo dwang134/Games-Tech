@@ -4,82 +4,70 @@ h1{
 }
 
 .card{
-    background-color: #fff;
-    padding: 4rem;
+    background: #f6f6f6; 
+    padding: 3rem 1rem;
 }
 
 .card-container{
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 90%;
+    max-width: 1120px;
+    max-width: 95%;
     margin: 0 auto;
-    background: #1f98f4;
 }
 
-.card-wrapper{
+/* .card-wrapper{
     position: relative;
-    margin: 50px 0;
-    background: #000;
-}
+    margin: 50px 0 45px;
+} */
 
 .card-items{
-    margin-bottom: 24px; /*4 rem? */
-    background: rgb(250, 246, 10);
+    position: relative;
+    margin: 50px 0 70px;
+    /* background: red; */
+    /*option to either make a h+w or relative with margin */
 }
 
 .card-item{
-    /*default row */
     display: flex;
-    list-style: none;
-    flex: 1; 
-    margin: 0 1rem;
+    flex: 1;
+    margin: 0 0.75rem;
     border-radius: 10px;
-    background: rgb(250, 4, 4);
 }
 
 .card-item-link{
     display:flex;
-    /* top of container */
+    background: #fff;
     flex-flow: column;
     width: 100%;
+    /* height: 500px; you could give it width and height but then you have to declare that right away. */
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
+    /* hide anything going out of frame */
     overflow: hidden;
     text-decoration: none;
-    background: rgb(175, 2, 255);
+    /* border-style: border-box; */
+    /* position: relative; */
+    /*if there is any sizing of container you want to declare 
+    based on how big that is instead of giving parent container a fixed size and then dont use relative*/
 }
 
-/* image here */
 .card-item-pic-wrap {
-    /*relative to card-item-link-container*/
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
-    padding-top: 80%;
+    padding-bottom: 70%; /* 70percent increase, if no bottom specified it will be 140%*/
+    /* box-sizing: border-box; */
     overflow: hidden;
   }
   
-  row {
+  .fade-img {
     animation-name: fade-img;
     animation-duration: 2s;
-  }
-  
-  /*changes after, for each image  */
-  .card-item-pic-wrap::after {
-    content: attr(data-category); /*use label text as data-category*/
-    position: relative;
-    display: flex;
-    bottom: 0;
-    padding: 6px 8px;
-    max-width: 100%;
-    font-size: 12px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #1f98f4;
-    /* box-sizing: border-box;
-    border-radius: 3px; */
   }
   
   .card-item-img {
@@ -96,19 +84,36 @@ h1{
     object-fit: cover;
     transition: all 0.2s linear;
   }
+
+  .card-item-pic-wrap::after {
+    content: attr(data-category);
+    position: absolute;
+    bottom: 0;
+    margin-right: 4%;
+    padding: 6px 8px;
+    max-width: calc((100%)-60px);
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, rgb(111, 102, 220), rgb(98, 87, 235));
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
   
-  .card-item-img:hover {
+  .card-item-pic-wrap:hover {
     transform: scale(1.1);
   }
+
   
   .card-item-info {
     padding: 20px 30px 30px;
+    background: #fff;
   }
   
   .card-item-text {
     color: #252e48;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 18px;
   }
   
   @media only screen and (min-width: 1200px) {
@@ -125,7 +130,7 @@ h1{
   
   @media only screen and (max-width: 1024px) {
     .card-item {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
   
