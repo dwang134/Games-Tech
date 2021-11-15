@@ -4,7 +4,7 @@ import "./Cards.css";
 const Cards = () => {
   return (
     <div className="card">
-      <h1>Checkout the latest news!</h1>
+      <h1>Checkout the latest feed!</h1>
       <div className="card-container">
         <div className="card-wrapper">
           <ul className="card-items">
@@ -27,8 +27,8 @@ const Cards = () => {
               path="/tech"
             />
             <CardItem
-              src="images/img3.jpg"
-              text="Is Sekiro still one of the best AAA title in 2021?"
+              src="images/gow.webp"
+              text="God of War finally releasing on PC in 2022?"
               label="Games"
               path="/games"
             />

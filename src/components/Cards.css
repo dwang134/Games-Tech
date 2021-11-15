@@ -14,62 +14,72 @@ h1{
     align-items: center;
     max-width: 90%;
     margin: 0 auto;
+    background: #1f98f4;
 }
 
 .card-wrapper{
     position: relative;
-    margin: 50px 0 45px;
+    margin: 50px 0;
+    background: #000;
 }
 
 .card-items{
     margin-bottom: 24px; /*4 rem? */
+    background: rgb(250, 246, 10);
 }
 
 .card-item{
+    /*default row */
     display: flex;
     list-style: none;
-    flex: 1;
+    flex: 1; 
     margin: 0 1rem;
     border-radius: 10px;
+    background: rgb(250, 4, 4);
 }
 
 .card-item-link{
     display:flex;
+    /* top of container */
     flex-flow: column;
     width: 100%;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
-    /* hide anything going out of frame */
-    overflow: hidden; 
+    overflow: hidden;
     text-decoration: none;
+    background: rgb(175, 2, 255);
 }
 
+/* image here */
 .card-item-pic-wrap {
+    /*relative to card-item-link-container*/
     position: relative;
     width: 100%;
-    padding-top: 67%;
+    padding-top: 80%;
     overflow: hidden;
   }
   
-  .fade-img {
+  row {
     animation-name: fade-img;
     animation-duration: 2s;
   }
   
+  /*changes after, for each image  */
   .card-item-pic-wrap::after {
-    content: attr(data-category);
-    position: absolute;
+    content: attr(data-category); /*use label text as data-category*/
+    position: relative;
+    display: flex;
     bottom: 0;
-    margin-left: 10px;
     padding: 6px 8px;
-    max-width: calc((100%) - 60px);
+    max-width: 100%;
     font-size: 12px;
     font-weight: 700;
     color: #fff;
     background-color: #1f98f4;
-    box-sizing: border-box;
+    /* box-sizing: border-box;
+    border-radius: 3px; */
   }
   
   .card-item-img {

@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div className="hero-container">
       {/* <img src="/videos/computerBrowse.gif"/> */}
       <video src="/videos/Game_room.mp4" autoPlay loop muted></video>
-      <h1>GAMES AND TECHNOLOGY</h1>
+      <h1>GAMES AND TECH NEWS</h1>
       <p>start browsing today</p>
       <div className="hero-btns">
         <Button buttonStyle="btn--outline" buttonSize="btn--large">
