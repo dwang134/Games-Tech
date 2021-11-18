@@ -4,8 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ###### Overall view
 •Created a web app that showcases all the news about games or technologies
+
 •Designed a very clean and modern look of the website
+
 •Showcases all different articles that have recently been added
+
 •Responsive and will adjust according to scale
 
 ###### Demo
