@@ -1,11 +1,17 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# GamesTech
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+###### Overall view
+•Created a web app that showcases all the news about games or technologies
+•Designed a very clean and modern look of the website
+•Showcases all different articles that have recently been added
+•Responsive and will adjust according to scale
 
-In the project directory, you can run:
+###### Demo
+![enter image description here](https://i.imgur.com/FH63iqB.png)
+![enter image description here](https://i.imgur.com/16xCKlS.png)
+![enter image description here](https://i.imgur.com/5PPSwSv.png)
 
 ### `npm start`
 
