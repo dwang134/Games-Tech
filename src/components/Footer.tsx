@@ -8,10 +8,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
-        </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
+         Stay up to date!
         </p>
         <div className='input-areas'>
           <form>
@@ -23,6 +20,9 @@ function Footer() {
             />
             <Button buttonStyle='btn--outline'>Subscribe</Button>
           </form>
+          <p className='footer-subscription-text'>
+          You can unsubscribe at any time.
+        </p>
         </div>
       </section>
       <div className='footer-links'>
@@ -39,7 +39,6 @@ function Footer() {
             <h2>Contact Us</h2>
             <Link to='/'>Contact</Link>
             <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
             <Link to='/'>Sponsorships</Link>
           </div>
         </div>
