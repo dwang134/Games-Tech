@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Games-Tech/static/css/main.716fcd17.chunk.css",
-    "main.js": "/Games-Tech/static/js/main.c8e770c4.chunk.js",
-    "main.js.map": "/Games-Tech/static/js/main.c8e770c4.chunk.js.map",
+    "main.js": "/Games-Tech/static/js/main.e88a80f0.chunk.js",
+    "main.js.map": "/Games-Tech/static/js/main.e88a80f0.chunk.js.map",
     "runtime-main.js": "/Games-Tech/static/js/runtime-main.e95ad181.js",
     "runtime-main.js.map": "/Games-Tech/static/js/runtime-main.e95ad181.js.map",
     "static/js/2.bdb69d51.chunk.js": "/Games-Tech/static/js/2.bdb69d51.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.e95ad181.js",
     "static/js/2.bdb69d51.chunk.js",
     "static/css/main.716fcd17.chunk.css",
-    "static/js/main.c8e770c4.chunk.js"
+    "static/js/main.e88a80f0.chunk.js"
   ]
 }
