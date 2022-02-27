@@ -6,7 +6,7 @@ const Tech:React.FC = () => {
     return (
         <div className= "technology">
        <div className="hero-container">
-        <video src="../../../videos/snow-anime.mp4" autoPlay muted></video>
+        <video src="../../../Games-Tech/videos/snow-anime.mp4" autoPlay muted></video>
         <h2 className="product-text">TECH</h2>
         </div>
       </div>

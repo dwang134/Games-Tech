@@ -29,33 +29,33 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/Games-Tech/sign-up'>How it works</Link>
+            <Link to='/Games-Tech'>Testimonials</Link>
+            <Link to='/Games-Tech'>Careers</Link>
+            <Link to='/Games-Tech'>Investors</Link>
+            <Link to='/Games-Tech'>Terms of Service</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Sponsorships</Link>
+            <Link to='/Games-Tech'>Contact</Link>
+            <Link to='/Games-Tech'>Support</Link>
+            <Link to='/Games-Tech'>Sponsorships</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
+            <Link to='/Games-Tech'>Submit Video</Link>
+            <Link to='/Games-Tech'>Ambassadors</Link>
+            <Link to='/Games-Tech'>Agency</Link>
+            <Link to='/Games-Tech'>Influencer</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link to='/Games-Tech'>Instagram</Link>
+            <Link to='/Games-Tech'>Facebook</Link>
+            <Link to='/Games-Tech'>Youtube</Link>
+            <Link to='/Games-Tech'>Twitter</Link>
           </div>
         </div>
       </div>

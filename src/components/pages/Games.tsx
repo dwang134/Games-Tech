@@ -12,16 +12,16 @@ const Games: React.FC = () => {
   return (
     <div className="games">
       <div className="hero-container">
-        <video src="../../../videos/snow-anime.mp4" autoPlay muted></video>
+        <video src="../../../Games-Tech/videos/snow-anime.mp4" autoPlay muted></video>
         <h2 className="product-text">GAMES</h2>
-        <div className="volume-container">
+        {/* <div className="volume-container">
           <div className="volume-group">
             <i className="fas fa-volume-down" onClick={() => volumeUp(0.5)}></i>
             </div>
             <div className="volume-group">
             <i className="fas fa-volume-up" onClick={() => volumeUp(0.1)}></i>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
   );

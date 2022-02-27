@@ -23,7 +23,7 @@ export const Button:React.FC<Props> = ({children, type, onClick, buttonStyle, bu
 
 
     return (
-        <Link to= '/sign-up' className= 'btn-mobile'>
+        <Link to= '/Games-Tech/sign-up' className= 'btn-mobile'>
             {/* rendering whatever you passed in as the prop */}
             {/* two main className styles of the button */}
             <button className={`btn ${checkButtonStyles} ${checkButtonSize}`}

@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
       <>
         <div className="navbar">
           <div className="navbar-container">
-            <Link to="/" className="navbar-logo">
+            <Link to="/Games-Tech" className="navbar-logo">
               Games
               <span className="text-primary">Tech</span>
               {/* <img src="/videos/giphy.gif" className="gif-logo"/> */}
@@ -47,18 +47,18 @@ const Navbar: React.FC = () => {
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                   <li className="nav-item">
                     {/* if you click on one of the items then let onClick go back to falsfe(hide)*/}
-                    <Link to="/home" className="nav-links" onClick={handleClick}>
+                    <Link to="/Games-Tech/home" className="nav-links" onClick={handleClick}>
                       Home
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/games" className="nav-links" onClick={handleClick}>
+                    <Link to="/Games-Tech/games" className="nav-links" onClick={handleClick}>
                       Games
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link
-                      to="/tech"
+                      to="/Games-Tech/tech"
                       className="nav-links"
                       onClick={handleClick}
                     >
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                   {/* specifically for mobile hidden for desktop*/}
                   <li>
                     <Link
-                      to="/sign-up"
+                      to="/Games-Tech/sign-up"
                       className="nav-links-mobile"
                       onClick={handleClick}
                     >
